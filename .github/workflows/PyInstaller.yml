@@ -7,13 +7,13 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  PyInstaller:
     runs-on: macos-latest
     
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
       with:
         python-version: 3.11.3
 
@@ -25,7 +25,7 @@ jobs:
       run: |
         pyinstaller --onefile --windowed main.py
     - name: Upload .app
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: SceneDetector.app
         path: dist/main.app

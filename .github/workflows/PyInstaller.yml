@@ -8,7 +8,7 @@ on:
 
 jobs:
   PyInstaller:
-    runs-on: macos-latest
+    runs-on: macos-latest-xlarge
     
     steps:
     - uses: actions/checkout@v3
@@ -24,6 +24,10 @@ jobs:
     - name: Execute PyInstaller
       run: |
         pyinstaller --onefile --windowed main.py
+        ls
+        cs dist
+        ls 
+        
     - name: Upload .app
       uses: actions/upload-artifact@v3
       with:

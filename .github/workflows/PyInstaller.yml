@@ -24,9 +24,6 @@ jobs:
     - name: Execute PyInstaller
       run: |
         pyinstaller --onefile --windowed main.py
-        ls
-        cs dist
-        ls 
         
     - name: Upload .app
       uses: actions/upload-artifact@v3

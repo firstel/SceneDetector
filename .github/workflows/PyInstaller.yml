@@ -8,7 +8,7 @@ on:
 
 jobs:
   PyInstaller:
-    runs-on: macos-latest-xlarge
+    runs-on: macos-latest
     
     steps:
     - uses: actions/checkout@v3
